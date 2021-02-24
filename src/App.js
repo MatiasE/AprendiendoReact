@@ -35,8 +35,10 @@ class HelloWorld extends React.Component {
     } else {
       return (
         <Fragment>
-          <h1>No hay Elementos</h1>
-          <button onClick={this.toggleShow}>Toggle Show</button>
+          <div id="hello">
+            <h1>No hay Elementos</h1>
+            <button onClick={this.toggleShow}>Toggle Show</button>
+          </div>
         </Fragment>
       );
     }
