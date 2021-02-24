@@ -1,6 +1,6 @@
 import "./styles.css";
 import "./App.css";
-import React from "react";
+import React, { Fragment } from "react";
 
 // 2da Manera:
 export default function App() {
@@ -15,12 +15,31 @@ export default function App() {
 }
 
 class HelloWorld extends React.Component {
+  state = {
+    show: true
+  };
   render() {
-    return (
-      <div id="hello">
-        <h3>{this.props.subtitle}</h3>
-        {this.props.mytext}
-      </div>
-    )
+    if (this.state.show) {
+      return (
+        <Fragment>
+          <div id="hello">
+            <h3>{this.props.subtitle}</h3>
+            {this.props.mytext}
+            <button onClick={() => this.setState({ show: false })}>
+              Toggle show
+            </button>
+          </div>
+        </Fragment>
+      );
+    } else {
+      return (
+        <Fragment>
+          <h1>No hay Elementos</h1>
+          <button onClick={() => this.setState({ show: true })}>
+            Toggle Show
+          </button>
+        </Fragment>
+      );
+    }
   }
 }
