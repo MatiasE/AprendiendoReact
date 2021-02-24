@@ -18,6 +18,9 @@ class HelloWorld extends React.Component {
   state = {
     show: true
   };
+  toggleShow = () => {
+    this.setState({ show: !this.state.show });
+  };
   render() {
     if (this.state.show) {
       return (
@@ -25,9 +28,7 @@ class HelloWorld extends React.Component {
           <div id="hello">
             <h3>{this.props.subtitle}</h3>
             {this.props.mytext}
-            <button onClick={() => this.setState({ show: false })}>
-              Toggle show
-            </button>
+            <button onClick={this.toggleShow}>Toggle show</button>
           </div>
         </Fragment>
       );
@@ -35,9 +36,7 @@ class HelloWorld extends React.Component {
       return (
         <Fragment>
           <h1>No hay Elementos</h1>
-          <button onClick={() => this.setState({ show: true })}>
-            Toggle Show
-          </button>
+          <button onClick={this.toggleShow}>Toggle Show</button>
         </Fragment>
       );
     }
