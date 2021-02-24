@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div>
       This is my component:
-      <HelloWorld mytext="Hello Fazt" subtitle="loremp ipsum" />
+      <HelloWorld mytext="Hello Matias" subtitle="loremp ipsum" />
       <HelloWorld mytext="Hola Mundo" subtitle="asdasdasd" />
       <HelloWorld mytext="Hello!" subtitle="component3" />
     </div>
