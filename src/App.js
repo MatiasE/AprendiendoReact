@@ -14,23 +14,13 @@ export default function App() {
   );
 }
 
-export function HelloWorld(props) {
-  return (
-    <div id="hello">
-      <h3>{props.subtitle}</h3>
-      {props.mytext}
-    </div>
-  );
-}
-
-/* class HelloWorld extends React.Component {
+class HelloWorld extends React.Component {
   render() {
     return (
       <div id="hello">
-        <h3>{props.subtitle}</h3>
-        {props.mytext}
+        <h3>{this.props.subtitle}</h3>
+        {this.props.mytext}
       </div>
     )
   }
 }
-*/
