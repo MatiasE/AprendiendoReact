@@ -2,7 +2,7 @@ import "./styles.css";
 import "./App.css";
 import React, { Fragment } from "react";
 
-// 2da Manera:
+// Creo la funcion APP:
 export default function App() {
   return (
     <div>
